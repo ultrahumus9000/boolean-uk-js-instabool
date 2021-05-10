@@ -1,21 +1,5 @@
 // write your code here
 
-
-// "images": [
-//     {
-//       "id": 1,
-//       "title": "Coder dog",
-//       "likes": 7,
-//       "image": "./assets/coder-dog.png"
-//     }
-// {
-//     "id": 1,
-//     "content": "What a cute dog!", li
-//     "imageId": 1 li
-//   }
-
-
-
 function createpetcard(pet){
 let sectionel = document.querySelector('.image-container')
 let articleel = document.createElement('article')
