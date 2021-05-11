@@ -19,6 +19,13 @@ spanel.innerText =`${pet.likes} likes`
 let likebtn = document.createElement('button')
 likebtn.setAttribute('class','like-button')
 likebtn.innerText = '♥' 
+likebtn.addEventListener('click', function (event){
+    event.stopPropagation()
+    let newpet = pet.likes + 1
+    updatelikes(newpet)
+})
+
+
 divlikes.append(spanel,likebtn)
 let ulel = document.createElement('ul')
 ulel.setAttribute('class','comments')
@@ -41,8 +48,12 @@ postel.classList.add('comment-button')
 postel.setAttribute('type','submit')
 postel.innerText = 'post'
 formel.append(inputel,postel)
+formel.addEventListener('submit',function (event){
+    event.preventDefault()
+})
 articleel.append(titleel,imgel,divlikes, ulel,formel )
 sectionel.append(articleel)
+
 }
 
 
@@ -61,3 +72,14 @@ fetch("http://localhost:3000/images")
     return response
 }
 )
+
+
+
+function updatelikes(response){
+    fetch('http://localhost:3000/images/1', {
+    method:'PATCH',
+    headers: {'Content-Type':"appliation/json"},
+    body: JSON.stringify({likes:response})
+    } 
+    )
+}
