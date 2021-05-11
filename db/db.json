@@ -3,13 +3,14 @@
     {
       "id": 1,
       "title": "Coder dog",
-      "likes": 7,
-      "image": "./assets/coder-dog.png"
+      "likes": 26,
+      "image": "./assets/coder-dog.png",
+      "imageId": "1"
     },
     {
       "id": 2,
       "title": "Coder cats",
-      "likes": 5,
+      "likes": 10,
       "image": "./assets/coder-cat.jpeg"
     }
   ],
@@ -38,6 +39,81 @@
       "imageId": 1,
       "content": "Hes a good boy!!",
       "id": 5
+    },
+    {
+      "content": "cvbnm",
+      "imageId": "1",
+      "id": 6
+    },
+    {
+      "content": "xcvbn",
+      "imageId": "2",
+      "id": 7
+    },
+    {
+      "content": "cvbn",
+      "imageId": "1",
+      "id": 8
+    },
+    {
+      "content": "dsgh",
+      "imageId": "1",
+      "id": 9
+    },
+    {
+      "content": "nice dog",
+      "imageId": "1",
+      "id": 10
+    },
+    {
+      "content": "nice dog",
+      "imageId": "1",
+      "id": 11
+    },
+    {
+      "content": "okaynice",
+      "imageId": "1",
+      "id": 12
+    },
+    {
+      "content": "nice dog",
+      "imageId": "1",
+      "id": 13
+    },
+    {
+      "content": "nice dog",
+      "imageId": "1",
+      "id": 14
+    },
+    {
+      "content": "nice dog",
+      "imageId": "1",
+      "id": 15
+    },
+    {
+      "content": "cvbnm",
+      "imageId": "1",
+      "id": 16
+    },
+    {
+      "content": "sad",
+      "imageId": "1",
+      "id": 17
+    },
+    {
+      "content": "df",
+      "imageId": "1",
+      "id": 18
+    },
+    {
+      "content": "gu",
+      "imageId": "1",
+      "id": 19
+    },
+    {
+      "content": "gucgc",
+      "imageId": "1",
+      "id": 20
     }
   ]
 }
