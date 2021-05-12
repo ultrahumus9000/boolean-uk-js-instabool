@@ -134,35 +134,39 @@ newformel.classList.add('comment-form')
 let newinputtittle = document.querySelector('.one')
 let newinputurl = document.querySelector('.two')
 
-function returnimageid(){
-    return fetch("http://localhost:3000/images")
-    .then(function (response){
-    return response.json()
-    })
-    .then(function(response){
-        let j= calculateelements(response)
-        j++})
-}
+
 
 
 newformel.addEventListener('submit', function(event){
-        event.preventDefault()
-        const imageid = returnimageid()
-        fetch('http://localhost:3000/images', {
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({
-            title: newinputtittle.value,
-            likes: 0,
-            image: newinputurl.value,
-            comments:[],
-            imageId: imageid
+    event.preventDefault()
+    fetch("http://localhost:3000/images")
+        .then(function (response){
+        return response.json()
+        })
+        .then(function(response){
+            let j= calculateelements(response)
+            j++
+            console.log(j)
+            return j
+        }).then(function(imageid){
+                 fetch('http://localhost:3000/images', {
+                    method:'POST',
+                    headers:{'Content-Type':'application/json'},
+                    body: JSON.stringify({
+                        title: newinputtittle.value,
+                        likes: 0,
+                        image: newinputurl.value,
+                        comments:[],
+                        imageId: imageid
+                        })
+                    }).then(function(response){
+                        return response.json()
+                    }).then(function(response){
+                       createpetcard(response,response.imageId)
+                    }
+                    )
+
             })
-        }).then(function(response){
-            return response.json()
-        }).then(function(response){
-           createpetcard(response,response.imageId)
-        }
-        )
+       
 })
  
