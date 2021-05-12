@@ -38,6 +38,7 @@ for(const comment of dataid.comments){
 
 let formel = document.createElement('form')
 formel.setAttribute('class','comment-form')
+
 let inputel = document.createElement('input')
 inputel.setAttribute('class','comment-input')
 inputel.setAttribute('type','text')
@@ -53,29 +54,26 @@ articleel.append(titleel,imgel,divlikes, ulel,formel )
 sectionel.append(articleel)
 
 }
+
+
 function addcomment(formel,ulel,j){
     formel.addEventListener('submit',function (event){
-        event.preventDefault()
-        let liel = document.createElement('li')
-        liel.innerText = formel.comment.value
-        ulel.prepend(liel) 
+        event.preventDefault() 
         fetch(`http://localhost:3000/comments`,{
             method:'POST',
             headers: {'Content-Type':"application/json"},
             body: JSON.stringify({
-                content: `${formel.comment.value}`,
-                imageId: `${j}` 
+                content: formel.comment.value,
+                imageId: j 
             })
         })
-        .then(function(response){
-            console.log(response)
-            return response.json()
+        .then(function(){
+         let liel = document.createElement('li')
+           liel.innerText = formel.comment.value
+            ulel.prepend(liel)  
+            formel.reset()       
         })
-        .then(function(response){
-            liel.innerText = response.content
-            ulel.prepend(liel) 
-        })
-        // formel.reset()
+        
     })
 }
 
