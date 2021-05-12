@@ -68,12 +68,12 @@ function addcomment(formel,ulel,j){
             })
         })
         .then(function(){
-         let liel = document.createElement('li')
-           liel.innerText = formel.comment.value
-            ulel.prepend(liel)  
-            formel.reset()       
-        })
-        
+            let liel = document.createElement('li')
+            liel.innerText = formel.comment.value
+            ulel.prepend(liel) 
+            console.log(liel) 
+            formel.reset()     
+        }) 
     })
 }
 

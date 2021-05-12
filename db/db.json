@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Coder dog",
-      "likes": 26,
+      "likes": 20,
       "image": "./assets/coder-dog.png",
       "imageId": "1"
     },
@@ -41,79 +41,14 @@
       "id": 5
     },
     {
-      "content": "cvbnm",
-      "imageId": "1",
+      "content": "nice dog",
+      "imageId": 1,
       "id": 6
     },
     {
       "content": "xcvbn",
-      "imageId": "2",
+      "imageId": 2,
       "id": 7
-    },
-    {
-      "content": "cvbn",
-      "imageId": "1",
-      "id": 8
-    },
-    {
-      "content": "dsgh",
-      "imageId": "1",
-      "id": 9
-    },
-    {
-      "content": "nice dog",
-      "imageId": "1",
-      "id": 10
-    },
-    {
-      "content": "nice dog",
-      "imageId": "1",
-      "id": 11
-    },
-    {
-      "content": "okaynice",
-      "imageId": "1",
-      "id": 12
-    },
-    {
-      "content": "nice dog",
-      "imageId": "1",
-      "id": 13
-    },
-    {
-      "content": "nice dog",
-      "imageId": "1",
-      "id": 14
-    },
-    {
-      "content": "nice dog",
-      "imageId": "1",
-      "id": 15
-    },
-    {
-      "content": "cvbnm",
-      "imageId": "1",
-      "id": 16
-    },
-    {
-      "content": "sad",
-      "imageId": "1",
-      "id": 17
-    },
-    {
-      "content": "df",
-      "imageId": "1",
-      "id": 18
-    },
-    {
-      "content": "gu",
-      "imageId": "1",
-      "id": 19
-    },
-    {
-      "content": "gucgc",
-      "imageId": "1",
-      "id": 20
     }
   ]
 }
