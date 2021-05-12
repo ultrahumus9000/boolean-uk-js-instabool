@@ -135,8 +135,6 @@ let newinputtittle = document.querySelector('.one')
 let newinputurl = document.querySelector('.two')
 
 
-
-
 newformel.addEventListener('submit', function(event){
     event.preventDefault()
     fetch("http://localhost:3000/images")
@@ -165,8 +163,6 @@ newformel.addEventListener('submit', function(event){
                        createpetcard(response,response.imageId)
                     }
                     )
-
-            })
-       
+            }) 
 })
  
