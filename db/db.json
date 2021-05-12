@@ -14,28 +14,20 @@
       "image": "./assets/coder-cat.jpeg"
     },
     {
-      "title": "nicewirker",
+      "title": "business analyst",
       "likes": 0,
       "image": "https://images.pexels.com/photos/7480003/pexels-photo-7480003.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
       "comments": [],
-      "imageId": {},
+      "imageId": 3,
       "id": 3
     },
     {
-      "title": "sherly",
+      "title": "sucess",
       "likes": 0,
       "image": "https://images.pexels.com/photos/7480003/pexels-photo-7480003.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
       "comments": [],
-      "imageId": {},
+      "imageId": 4,
       "id": 4
-    },
-    {
-      "title": "nicekat",
-      "likes": 0,
-      "image": "https://images.pexels.com/photos/7480003/pexels-photo-7480003.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "comments": [],
-      "imageId": {},
-      "id": 5
     }
   ],
   "comments": [
