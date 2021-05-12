@@ -44,6 +44,8 @@ inputel.setAttribute('class','comment-input')
 inputel.setAttribute('type','text')
 inputel.setAttribute('name','comment')
 inputel.setAttribute('placeholder','Add a comment...')
+// inputel.setAttribute('required','true')
+// inputel.setAttribute('minlength',3)
 let postel = document.createElement('button')
 postel.classList.add('comment-button')
 postel.setAttribute('type','submit')
@@ -59,6 +61,7 @@ sectionel.append(articleel)
 function addcomment(formel,ulel,j){
     formel.addEventListener('submit',function (event){
         event.preventDefault() 
+        
         fetch(`http://localhost:3000/comments`,{
             method:'POST',
             headers: {'Content-Type':"application/json"},
@@ -66,18 +69,20 @@ function addcomment(formel,ulel,j){
                 content: formel.comment.value,
                 imageId: j 
             })
-        })
-        .then(function(){
+        }).then(function(response){
+            return response.json()
+        }
+        ).then(function(newcontent){
             let liel = document.createElement('li')
-            liel.innerText = formel.comment.value
+            liel.innerText = newcontent.content
+            console.log(newcontent.content)
             ulel.prepend(liel) 
-            console.log(liel) 
-            formel.reset()     
-        }) 
+            // formel.reset() both works 
+        })
+        formel.reset()
+    // this is just to comfirm that we defo add into server
     })
 }
-
-
 
 function createcards(data){
     for(let i = 0; i< data.length; i++ ){
@@ -87,6 +92,12 @@ function createcards(data){
     }
 }
 
+function calculateelements(data){
+    j = data.length
+    return j
+}
+
+function getimages(){
 fetch("http://localhost:3000/images")
 .then(function (response){
     return response.json()
@@ -96,6 +107,10 @@ fetch("http://localhost:3000/images")
     return response
 }
 )
+}
+
+getimages()
+
 
 
 function updatelikes(newlikes, spanel,j){
@@ -113,3 +128,41 @@ function updatelikes(newlikes, spanel,j){
     })
 }
 
+let newformel = document.querySelector('.image-card')
+newformel.classList.add('comment-form')
+
+let newinputtittle = document.querySelector('.one')
+let newinputurl = document.querySelector('.two')
+
+function returnimageid(){
+    return fetch("http://localhost:3000/images")
+    .then(function (response){
+    return response.json()
+    })
+    .then(function(response){
+        let j= calculateelements(response)
+        j++})
+}
+
+
+newformel.addEventListener('submit', function(event){
+        event.preventDefault()
+        const imageid = returnimageid()
+        fetch('http://localhost:3000/images', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({
+            title: newinputtittle.value,
+            likes: 0,
+            image: newinputurl.value,
+            comments:[],
+            imageId: imageid
+            })
+        }).then(function(response){
+            return response.json()
+        }).then(function(response){
+           createpetcard(response,response.imageId)
+        }
+        )
+})
+ 

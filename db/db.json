@@ -3,15 +3,39 @@
     {
       "id": 1,
       "title": "Coder dog",
-      "likes": 20,
+      "likes": 26,
       "image": "./assets/coder-dog.png",
       "imageId": "1"
     },
     {
       "id": 2,
       "title": "Coder cats",
-      "likes": 10,
+      "likes": 11,
       "image": "./assets/coder-cat.jpeg"
+    },
+    {
+      "title": "nicewirker",
+      "likes": 0,
+      "image": "https://images.pexels.com/photos/7480003/pexels-photo-7480003.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "comments": [],
+      "imageId": {},
+      "id": 3
+    },
+    {
+      "title": "sherly",
+      "likes": 0,
+      "image": "https://images.pexels.com/photos/7480003/pexels-photo-7480003.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "comments": [],
+      "imageId": {},
+      "id": 4
+    },
+    {
+      "title": "nicekat",
+      "likes": 0,
+      "image": "https://images.pexels.com/photos/7480003/pexels-photo-7480003.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "comments": [],
+      "imageId": {},
+      "id": 5
     }
   ],
   "comments": [
@@ -41,14 +65,9 @@
       "id": 5
     },
     {
-      "content": "nice dog",
+      "content": "xcvbnm",
       "imageId": 1,
       "id": 6
-    },
-    {
-      "content": "xcvbn",
-      "imageId": 2,
-      "id": 7
     }
   ]
 }
